@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Погода</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&family=Work+Sans:wght@300;400&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<main>
+		<div class="container">
+			<div class="weather__body">
+				<div class="weather__item1">
+					<form onsubmit="return false">
+						<input class="weather__city--input" value="" placeholder="Enter the city">
+						<button type="submit" class="weather__btn--search"></button>
+					</form>
+				</div>
+				<div class="weather__main">
+					<div class="weather__now active" id="tab_1">
+						<p class="weather__now--temp">
+						</p>
+						<img class="weather__now--img" src="/img/cloud.png" alt="Icon depicting current weather">
+						<div class="weather__now--save">
+							<h3 class="weather__title weather__now--title">
+
+							</h3>
+							<button class="weather__now--btn"></button>
+						</div>
+					</div>
+					<div class="weather__details" id="tab_2">
+						<h3 class="weather__title weather__details--title">
+
+						</h3>
+						<ul class="details__list">
+							<li class="details__temp">
+
+							</li>
+							<li class="details__feels">
+							</li>
+							<li class="details__precepitations">
+							</li>
+							<li class="details__sunrise">
+							</li>
+							<li class="details__sunset">
+							</li>
+						</ul>
+					</div>
+					<div class="weather__forecast" id="tab_3">
+						<h3 class="weather__title weather__forecast--title">
+
+						</h3>
+						<div class="weather__forecast--list">
+							<ul class="forecast__list" id="listForecast">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="weather__item3">
+					<p class="weather__item3--text">Added locations</p>
+				</div>
+				<div class="weather__item4">
+					<ul id="ul">
+
+					</ul>
+				</div>
+				<nav class="weather__tabs">
+					<a class="weather__tabs--btn weather__tabs--btnactive" href="#tab_1">
+						Now
+					</a>
+					<a class="weather__tabs--btn" href="#tab_2">
+						Details
+					</a>
+					<a class="weather__tabs--btn" href="#tab_3">
+						Forecast
+					</a>
+				</nav>
+			</div>
+		</div>
+		</div>
+
+	</main>
+	<script type="module" src="./js/weather.js"></script>
+</body>
+
+</html>
