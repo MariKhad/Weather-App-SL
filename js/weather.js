@@ -17,7 +17,7 @@ const FORECAST_URL = 'https://api.openweathermap.org/data/2.5/forecast';
 const API_WEATHER = 'a1cc7dc6cb10240ba58f80b279bd9acb';
 const UNITS = 'metric';
 const FORECAST_ITEM_LIMIT = "10";
-if (localStorage.length !== 0) {
+if (localStorage.getItem('currentCityName')) {
 	WEATHER_UI.SEARCH_INPUT.value = localStorage.getItem('currentCityName');
 } else {
 	WEATHER_UI.SEARCH_INPUT.value = 'Kazan';
@@ -26,7 +26,7 @@ if (localStorage.length !== 0) {
 let cityName;
 let savedCities = document.querySelectorAll('.weather__city');
 let savedCitiesBtns = document.querySelectorAll('.weather__city--del');
-if (localStorage.length !== 0) {
+if (localStorage.getItem('savedcities')) {
 	let cityList = new Set(Array.from(JSON.parse(localStorage.getItem('savedcities'))));
 }
 
