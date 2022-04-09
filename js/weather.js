@@ -26,8 +26,9 @@ if (localStorage.length !== 0) {
 let cityName;
 let savedCities = document.querySelectorAll('.weather__city');
 let savedCitiesBtns = document.querySelectorAll('.weather__city--del');
-let cityList = new Set(Array.from(JSON.parse(localStorage.getItem('savedcities'))));
-
+if (localStorage.length !== 0) {
+	let cityList = new Set(Array.from(JSON.parse(localStorage.getItem('savedcities'))));
+}
 
 WEATHER_UI.FORM.addEventListener('submit', getData);
 
