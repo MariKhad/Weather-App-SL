@@ -1,9 +1,9 @@
-import { WEATHER_UI } from '../view.js';
-import { createCityNode } from '../view.js';
-import { createForecastNode } from '../view.js';
-import { timeFormat } from '../view.js';
-import { tempFormat } from '../view.js';
-import { IMG_URL } from '../view.js';
+import { WEATHER_UI } from './view.js';
+import { createCityNode } from './view.js';
+import { createForecastNode } from './view.js';
+import { timeFormat } from './view.js';
+import { tempFormat } from './view.js';
+import { IMG_URL } from './view.js';
 
 addEventListener('DOMContentLoaded', savedCityShow);
 addEventListener('DOMContentLoaded', savedCityDelete);
