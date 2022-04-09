@@ -17,10 +17,12 @@ const FORECAST_URL = 'https://api.openweathermap.org/data/2.5/forecast';
 const API_WEATHER = 'a1cc7dc6cb10240ba58f80b279bd9acb';
 const UNITS = 'metric';
 const FORECAST_ITEM_LIMIT = "10";
-WEATHER_UI.SEARCH_INPUT.value = localStorage.getItem('currentCityName');
-if (WEATHER_UI.SEARCH_INPUT.value === "") {
+if (localStorage.length !== 0) {
+	WEATHER_UI.SEARCH_INPUT.value = localStorage.getItem('currentCityName');
+} else {
 	WEATHER_UI.SEARCH_INPUT.value = 'Kazan';
 }
+
 let cityName;
 let savedCities = document.querySelectorAll('.weather__city');
 let savedCitiesBtns = document.querySelectorAll('.weather__city--del');
