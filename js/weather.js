@@ -1,9 +1,9 @@
-import { WEATHER_UI } from './view.js';
-import { createCityNode } from './view.js';
-import { createForecastNode } from './view.js';
-import { timeFormat } from './view.js';
-import { tempFormat } from './view.js';
-import { IMG_URL } from './view.js';
+import { WEATHER_UI } from '../view.js';
+import { createCityNode } from '../view.js';
+import { createForecastNode } from '../view.js';
+import { timeFormat } from '../view.js';
+import { tempFormat } from '../view.js';
+import { IMG_URL } from '../view.js';
 
 addEventListener('DOMContentLoaded', savedCityShow);
 addEventListener('DOMContentLoaded', savedCityDelete);
@@ -13,6 +13,7 @@ addEventListener('DOMContentLoaded', getSavedCities);
 const WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather';
 const FORECAST_URL = 'https://api.openweathermap.org/data/2.5/forecast';
 
+//const API_WEATHER = 'f660a2fb1e4bad108d6160b7f58c555f';
 const API_WEATHER = 'a1cc7dc6cb10240ba58f80b279bd9acb';
 const UNITS = 'metric';
 const FORECAST_ITEM_LIMIT = "10";
