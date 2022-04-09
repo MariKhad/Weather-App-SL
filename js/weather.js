@@ -13,8 +13,7 @@ addEventListener('DOMContentLoaded', getSavedCities);
 const WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather';
 const FORECAST_URL = 'https://api.openweathermap.org/data/2.5/forecast';
 
-const API_WEATHER = 'f660a2fb1e4bad108d6160b7f58c555f';
-const API_FORECAST = 'a1cc7dc6cb10240ba58f80b279bd9acb';
+const API_WEATHER = 'a1cc7dc6cb10240ba58f80b279bd9acb';
 const UNITS = 'metric';
 const FORECAST_ITEM_LIMIT = "10";
 WEATHER_UI.SEARCH_INPUT.value = localStorage.getItem('currentCityName');
@@ -45,7 +44,7 @@ async function getData() {
 				getWeather(weather);
 				getForecast(forecast);
 			})
-			.catch(err => console.log(err))
+			.catch(alert)
 	} else {
 		alert("Enter the city, please")
 	}
