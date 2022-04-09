@@ -24,10 +24,11 @@ if (localStorage.getItem('currentCityName')) {
 }
 
 let cityName;
+let cityList = new Set();
 let savedCities = document.querySelectorAll('.weather__city');
 let savedCitiesBtns = document.querySelectorAll('.weather__city--del');
 if (localStorage.getItem('savedcities')) {
-	let cityList = new Set(Array.from(JSON.parse(localStorage.getItem('savedcities'))));
+	cityList = new Set(Array.from(JSON.parse(localStorage.getItem('savedcities'))));
 }
 
 WEATHER_UI.FORM.addEventListener('submit', getData);
@@ -108,7 +109,6 @@ WEATHER_UI.SAVED_BTN.addEventListener('click', function () {
 	cityName = document.querySelector('h3').textContent;
 	if (!cityList.has(cityName)) {
 		cityList.add(cityName);
-		console.log(cityList);
 		localStorage.setItem('savedcities', JSON.stringify(Array.from(cityList)));
 		createCityNode(cityName);
 		savedCities = document.querySelectorAll('.weather__city');
